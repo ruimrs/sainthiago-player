@@ -33,7 +33,6 @@ progress.addEventListener("click", function updateProgress() {
   progress.style.width = percent + "%";
 
   currentTime.textContent = formatTime(current);
-  console.log(currentTime);
 });
 
 function formatTime(time) {

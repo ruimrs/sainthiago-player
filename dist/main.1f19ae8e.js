@@ -150,7 +150,6 @@ progress.addEventListener("click", function updateProgress() {
   var percent = current / player.duration * 100;
   progress.style.width = percent + "%";
   currentTime.textContent = formatTime(current);
-  console.log(currentTime);
 });
 
 function formatTime(time) {
@@ -186,7 +185,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55194" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62174" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
