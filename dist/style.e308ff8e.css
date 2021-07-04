@@ -1,0 +1,71 @@
+body {
+  min-height: 100vh;
+  background-color: #d3e7ee;
+}
+
+.player-wrapper {
+  background-color: white;
+  width: 280px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.player-inside-wrapper {
+  background-color: #7097a8;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.song-image {
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  box-shadow: 0px 5px 25px rgb(50 50 50 / 50%);
+}
+
+.player-artist-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.song-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.artist-name {
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+i.fa {
+  color: #d3e7ee;
+}
+
+.previous > i.fa,
+.next > i.fa {
+  font-size: 22px;
+}
+
+.play > i.fa {
+  font-size: 30px;
+}
+
+p {
+  margin: 0;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

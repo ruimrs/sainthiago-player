@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your-player</title>
+    <link rel="stylesheet" href="/style.97fcb138.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/style.97fcb138.js"></script></head>
+  <body>
+    <h1>your-player</h1>
+    <div id="app">
+      <div class="player-wrapper">
+        <div class="player-inside-wrapper">
+          <div class="song-image">
+            <img src="https://i1.sndcdn.com/artworks-ezwwIAKxvuh9-0-t500x500.jpg">
+          </div>
+          <div class="player-artist-wrapper">
+            <p class="song-name">Não desistas</p>
+            <p class="artist-name">sainthiago</p>
+          </div>
+          <div class="song-bar">
+            <div class="controls">
+              <span class="previous">
+                <i class="fa fa-step-backward"></i>
+              </span>
+              <span class="play">
+                <i id="play-btn" class="fa fa-play"></i>
+              </span>
+              <span class="next">
+                <i class="fa fa-step-forward"></i>
+              </span>
+            </div>
+            <div class="time-wrapper">
+              <span id="current-time">--:--</span>
+              <span id="total-time">--:--</span>
+              <div class="slider" data-direction="horizontal">
+                <div class="progress">
+                  <div class="pin" id="progress-pin" data-method="rewind"></div>
+                </div>
+              </div>
+            </div>
+            <audio crossorigin="">
+              <source src="/nao_desistas.9be96812.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/main.1f19ae8e.js"></script>
+  </body>
+</html>
