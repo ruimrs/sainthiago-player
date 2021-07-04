@@ -11,80 +11,69 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-
-.player-inside-wrapper {
+.player-wrapper p {
+  margin: 0;
+}
+.player-wrapper .player-inside-wrapper {
   background-color: #7097a8;
   border-radius: 5px;
   height: 100%;
 }
-
-.song-image {
+.player-wrapper .song-image {
   padding: 20px;
 }
-
-img {
+.player-wrapper .song-image img {
   width: 100%;
   box-shadow: 0px 5px 25px rgba(50, 50, 50, 0.5);
 }
-
-.player-artist-wrapper {
+.player-wrapper .player-artist-wrapper {
   text-align: center;
   margin-bottom: 30px;
   color: white;
 }
-
-.song-name {
+.player-wrapper .player-artist-wrapper .song-name {
   font-size: 20px;
   font-weight: 700;
 }
-
-.artist-name {
+.player-wrapper .player-artist-wrapper .artist-name {
   font-size: 16px;
 }
-
-.controls {
+.player-wrapper .song-bar .controls {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80%;
   margin: 0 auto;
 }
-
-i.fa {
+.player-wrapper .song-bar i.fa {
   color: #d3e7ee;
+  cursor: pointer;
 }
-
-.previous > i.fa,
-.next > i.fa {
+.player-wrapper .song-bar .previous > i.fa,
+.player-wrapper .song-bar .next > i.fa {
   font-size: 22px;
 }
-
-.play > i.fa {
+.player-wrapper .song-bar .play > i.fa {
   font-size: 30px;
 }
-
-p {
-  margin: 0;
-}
-
-div.time-wrapper {
+.player-wrapper .song-bar div.time-wrapper {
   position: relative;
   margin: 0 auto;
   width: 92.5%;
 }
-div.time-wrapper span {
+.player-wrapper .song-bar div.time-wrapper span {
   color: #b3b3b3;
   font-size: 7px;
   position: absolute;
   top: -10px;
 }
-div.time-wrapper span#current-time {
+.player-wrapper .song-bar div.time-wrapper span#current-time {
   left: 0;
 }
-div.time-wrapper span#total-time {
+.player-wrapper .song-bar div.time-wrapper span#total-time {
   right: 0;
 }
-div.time-wrapper div.slider {
+.player-wrapper .song-bar div.time-wrapper div.slider {
   background-color: gray;
   border-radius: 2px;
   cursor: pointer;
@@ -92,14 +81,14 @@ div.time-wrapper div.slider {
   position: relative;
   width: 100%;
 }
-div.time-wrapper div.slider div.progress {
+.player-wrapper .song-bar div.time-wrapper div.slider div.progress {
   background-color: black;
   height: 100%;
   pointer-events: none;
   position: absolute;
   width: 0;
 }
-div.time-wrapper div.slider div.progress div.pin {
+.player-wrapper .song-bar div.time-wrapper div.slider div.progress div.pin {
   background-color: white;
   border-radius: 8px;
   height: 8px;
@@ -108,6 +97,8 @@ div.time-wrapper div.slider div.progress div.pin {
   right: -5px;
   top: -3px;
   width: 8px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+  transition: transform 0.25s ease;
 }
 
 /*# sourceMappingURL=/style.97fcb138.css.map */
