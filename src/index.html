@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>your-player</title>
+    <title>sainthiago-player</title>
     <link rel="stylesheet" href="style.scss" />
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <h1>your-player</h1>
+    <h1>sainthiago-player</h1>
     <div id="app">
       <div class="player-wrapper">
         <div class="player-inside-wrapper">
@@ -27,17 +32,17 @@
           <div class="song-bar">
             <div class="controls">
               <span class="previous">
-                <i class="fa fa-step-backward"></i>
+                <i class="fa fa-step-backward" title="work in progress..."></i>
               </span>
               <span class="play">
                 <i id="play-btn" class="fa fa-play"></i>
               </span>
               <span class="next">
-                <i class="fa fa-step-forward"></i>
+                <i class="fa fa-step-forward" title="work in progress..."></i>
               </span>
             </div>
             <div class="time-wrapper">
-              <span id="current-time">00:00</span>
+              <span id="current-time">0:00</span>
               <span id="total-time">--:--</span>
               <div class="slider" data-direction="horizontal">
                 <div class="progress">
@@ -50,6 +55,15 @@
             </audio>
           </div>
         </div>
+      </div>
+      <div class="spotify-link">
+        <a
+          href="https://open.spotify.com/artist/2I5yjM2Yc82AaQuuMZqQnV?si=768gdq6dTjyZ2UhN3SaZPw&dl_branch=1"
+          target="_blank"
+          title="sainthiago's spotify"
+        >
+          <i class="fa fa-spotify"></i>
+        </a>
       </div>
     </div>
     <script src="main.js"></script>

@@ -1,9 +1,14 @@
 body {
   min-height: 100vh;
   background-color: #d3e7ee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
-.player-wrapper {
+body h1 {
+  color: #7097a8;
+  margin: 50px 0;
+  text-align: center;
+}
+body .player-wrapper {
   background-color: white;
   width: 280px;
   height: 500px;
@@ -11,84 +16,86 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-.player-wrapper p {
+body .player-wrapper p {
   margin: 0;
 }
-.player-wrapper .player-inside-wrapper {
+body .player-wrapper .player-inside-wrapper {
   background-color: #7097a8;
   border-radius: 5px;
   height: 100%;
 }
-.player-wrapper .song-image {
+body .player-wrapper .player-inside-wrapper .song-image {
   padding: 20px;
 }
-.player-wrapper .song-image img {
+body .player-wrapper .player-inside-wrapper .song-image img {
   width: 100%;
   box-shadow: 0px 5px 25px rgba(50, 50, 50, 0.5);
 }
-.player-wrapper .player-artist-wrapper {
+body .player-wrapper .player-inside-wrapper .player-artist-wrapper {
   text-align: center;
   margin-bottom: 30px;
   color: white;
 }
-.player-wrapper .player-artist-wrapper .song-name {
+body .player-wrapper .player-inside-wrapper .player-artist-wrapper .song-name {
   font-size: 20px;
   font-weight: 700;
 }
-.player-wrapper .player-artist-wrapper .artist-name {
+body .player-wrapper .player-inside-wrapper .player-artist-wrapper .artist-name {
   font-size: 16px;
 }
-.player-wrapper .song-bar .controls {
+body .player-wrapper .player-inside-wrapper .song-bar .controls {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
-.player-wrapper .song-bar i.fa {
+body .player-wrapper .player-inside-wrapper .song-bar .controls i.fa {
   color: #d3e7ee;
   cursor: pointer;
 }
-.player-wrapper .song-bar .previous > i.fa,
-.player-wrapper .song-bar .next > i.fa {
+body .player-wrapper .player-inside-wrapper .song-bar .controls .previous > i.fa,
+body .player-wrapper .player-inside-wrapper .song-bar .controls .next > i.fa {
   font-size: 22px;
+  opacity: 0.5;
 }
-.player-wrapper .song-bar .play > i.fa {
+body .player-wrapper .player-inside-wrapper .song-bar .controls .play > i.fa {
   font-size: 30px;
 }
-.player-wrapper .song-bar div.time-wrapper {
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper {
   position: relative;
   margin: 0 auto;
-  width: 92.5%;
+  width: 80%;
 }
-.player-wrapper .song-bar div.time-wrapper span {
-  color: #b3b3b3;
-  font-size: 7px;
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper span {
+  color: white;
+  font-size: 8px;
   position: absolute;
-  top: -10px;
+  top: -15px;
 }
-.player-wrapper .song-bar div.time-wrapper span#current-time {
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper span#current-time {
   left: 0;
 }
-.player-wrapper .song-bar div.time-wrapper span#total-time {
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper span#total-time {
   right: 0;
 }
-.player-wrapper .song-bar div.time-wrapper div.slider {
-  background-color: gray;
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper div.slider {
+  background-color: #d3e7ee;
   border-radius: 2px;
   cursor: pointer;
   height: 2px;
   position: relative;
   width: 100%;
 }
-.player-wrapper .song-bar div.time-wrapper div.slider div.progress {
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper div.slider div.progress {
   background-color: black;
   height: 100%;
   pointer-events: none;
   position: absolute;
   width: 0;
 }
-.player-wrapper .song-bar div.time-wrapper div.slider div.progress div.pin {
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper div.slider div.progress div.pin {
   background-color: white;
   border-radius: 8px;
   height: 8px;
@@ -99,6 +106,17 @@ body {
   width: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
   transition: transform 0.25s ease;
+}
+body .spotify-link {
+  text-align: center;
+  margin-top: 50px;
+}
+body .spotify-link a {
+  text-decoration: none;
+}
+body .spotify-link a i {
+  color: #7097a8;
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

@@ -125,7 +125,7 @@ var totalTime = document.querySelector("#total-time");
 var progress = document.querySelector(".progress");
 
 player.onloadedmetadata = function () {
-  totalTime.innerHTML = formatTime(player.duration);
+  totalTime.textContent = formatTime(player.duration);
 };
 
 playBtn.addEventListener("click", function () {
@@ -144,6 +144,13 @@ player.addEventListener("timeupdate", function updateProgress() {
   var percent = current / player.duration * 100;
   progress.style.width = percent + "%";
   currentTime.textContent = formatTime(current);
+});
+progress.addEventListener("click", function updateProgress() {
+  var current = player.currentTime;
+  var percent = current / player.duration * 100;
+  progress.style.width = percent + "%";
+  currentTime.textContent = formatTime(current);
+  console.log(currentTime);
 });
 
 function formatTime(time) {
@@ -179,7 +186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64580" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55194" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

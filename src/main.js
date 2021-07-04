@@ -5,7 +5,7 @@ const totalTime = document.querySelector("#total-time");
 const progress = document.querySelector(".progress");
 
 player.onloadedmetadata = function () {
-  totalTime.innerHTML = formatTime(player.duration);
+  totalTime.textContent = formatTime(player.duration);
 };
 
 playBtn.addEventListener("click", () => {
@@ -25,6 +25,15 @@ player.addEventListener("timeupdate", function updateProgress() {
   progress.style.width = percent + "%";
 
   currentTime.textContent = formatTime(current);
+});
+
+progress.addEventListener("click", function updateProgress() {
+  let current = player.currentTime;
+  let percent = (current / player.duration) * 100;
+  progress.style.width = percent + "%";
+
+  currentTime.textContent = formatTime(current);
+  console.log(currentTime);
 });
 
 function formatTime(time) {
