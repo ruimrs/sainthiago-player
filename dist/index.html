@@ -35,11 +35,7 @@
             <div class="time-wrapper">
               <span id="current-time">0:00</span>
               <span id="total-time">--:--</span>
-              <div class="slider" data-direction="horizontal">
-                <div class="progress">
-                  <div class="pin" id="progress-pin" data-method="rewind"></div>
-                </div>
-              </div>
+              <input class="progress" type="range" min="0" max="100" value="0" step="0.1">
             </div>
             <audio id="audio-player" crossorigin="" preload="metadata">
               <source src="/nao_desistas.9be96812.mp3" type="audio/mpeg">
