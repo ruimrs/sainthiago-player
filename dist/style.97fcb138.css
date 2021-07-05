@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   background-color: #d3e7ee;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: hidden;
 }
 body h1 {
   color: #7097a8;
@@ -43,12 +44,15 @@ body .player-wrapper .player-inside-wrapper .player-artist-wrapper .song-name {
 body .player-wrapper .player-inside-wrapper .player-artist-wrapper .artist-name {
   font-size: 16px;
 }
+body .player-wrapper .player-inside-wrapper .song-bar {
+  height: 150px;
+  width: 80%;
+  margin: 0 auto;
+}
 body .player-wrapper .player-inside-wrapper .song-bar .controls {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
   margin-bottom: 40px;
 }
 body .player-wrapper .player-inside-wrapper .song-bar .controls i.fa {
@@ -65,8 +69,6 @@ body .player-wrapper .player-inside-wrapper .song-bar .controls .play > i.fa {
 }
 body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper {
   position: relative;
-  margin: 0 auto;
-  width: 80%;
 }
 body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper span {
   color: white;
@@ -106,6 +108,9 @@ body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper div.slide
   width: 8px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
   transition: transform 0.25s ease;
+}
+body .player-wrapper .player-inside-wrapper .song-bar div.time-wrapper div.slider div.progress div.pin:active {
+  transform: scale(1.5);
 }
 body .spotify-link {
   text-align: center;

@@ -3,6 +3,7 @@ body {
   background-color: #d3e7ee;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: hidden;
 
   h1 {
     color: #7097a8;
@@ -52,12 +53,13 @@ body {
       }
 
       .song-bar {
+        height: 150px;
+        width: 80%;
+        margin: 0 auto;
         .controls {
           display: flex;
           justify-content: space-around;
           align-items: center;
-          width: 80%;
-          margin: 0 auto;
           margin-bottom: 40px;
 
           i.fa {
@@ -78,8 +80,6 @@ body {
 
         div.time-wrapper {
           position: relative;
-          margin: 0 auto;
-          width: 80%;
 
           span {
             color: white;
@@ -119,8 +119,12 @@ body {
                 right: -5px;
                 top: -3px;
                 width: 8px;
-                box-shadow: (0px 1px 1px 0px rgba(0, 0, 0, 0.32));
-                transition: (transform 0.25s ease);
+                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+                transition: transform 0.25s ease;
+
+                &:active {
+                  transform: scale(1.5);
+                }
               }
             }
           }

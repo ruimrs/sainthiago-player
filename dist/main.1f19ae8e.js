@@ -118,11 +118,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
+// defs
 var player = document.getElementById("audio-player");
 var playBtn = document.getElementById("play-btn");
 var currentTime = document.querySelector("#current-time");
 var totalTime = document.querySelector("#total-time");
+var slider = document.querySelector(".slider");
 var progress = document.querySelector(".progress");
+var pin = document.querySelector(".pin");
 
 player.onloadedmetadata = function () {
   totalTime.textContent = formatTime(player.duration);
@@ -139,23 +142,71 @@ playBtn.addEventListener("click", function () {
 
   playBtn.classList.toggle("fa-pause");
 });
-player.addEventListener("timeupdate", function updateProgress() {
-  var current = player.currentTime;
-  var percent = current / player.duration * 100;
-  progress.style.width = percent + "%";
-  currentTime.textContent = formatTime(current);
-});
-progress.addEventListener("click", function updateProgress() {
-  var current = player.currentTime;
-  var percent = current / player.duration * 100;
-  progress.style.width = percent + "%";
-  currentTime.textContent = formatTime(current);
+player.addEventListener("timeupdate", function () {
+  return updateProgress();
 });
 
 function formatTime(time) {
   var min = Math.floor(time / 60);
   var sec = Math.floor(time % 60);
   return min + ":" + (sec < 10 ? "0" + sec : sec);
+}
+
+function updateProgress() {
+  var current = player.currentTime;
+  var percent = current / player.duration * 100;
+  progress.style.width = percent + "%";
+  currentTime.textContent = formatTime(current);
+} // Drag code
+
+
+var dragItem = document.querySelector(".pin");
+var container = document.querySelector(".song-bar");
+var active = false;
+var currentX;
+var initialX;
+var xOffset = 0;
+container.addEventListener("touchstart", dragStart, false);
+container.addEventListener("touchend", dragEnd, false);
+container.addEventListener("touchmove", drag, false);
+container.addEventListener("mousedown", dragStart, false);
+container.addEventListener("mouseup", dragEnd, false);
+container.addEventListener("mousemove", drag, false);
+
+function dragStart(e) {
+  if (e.type === "touchstart") {
+    initialX = e.touches[0].clientX - xOffset;
+  } else {
+    initialX = e.clientX - xOffset;
+  }
+
+  if (e.target === dragItem) {
+    active = true;
+  }
+}
+
+function dragEnd(e) {
+  initialX = currentX;
+  active = false;
+}
+
+function drag(e) {
+  if (active) {
+    e.preventDefault();
+
+    if (e.type === "touchmove") {
+      currentX = e.touches[0].clientX - initialX;
+    } else {
+      currentX = e.clientX - initialX;
+    }
+
+    xOffset = currentX;
+    setTranslate(currentX, 0, dragItem);
+  }
+}
+
+function setTranslate(xPos, yPos, el) {
+  el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -185,7 +236,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62174" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49755" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
