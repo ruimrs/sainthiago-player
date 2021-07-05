@@ -10,3 +10,4 @@ documentation that helped me during the dev of this small app:
 - https://www.w3schools.com/jsref/met_audio_play.asp
 - https://www.w3schools.com/tags/av_event_timeupdate.asp
 - https://codepen.io/emilcarlsson/pen/WdRRMX
+- https://www.kirupa.com/html5/drag.htm
